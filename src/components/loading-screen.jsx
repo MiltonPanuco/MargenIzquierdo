@@ -16,12 +16,12 @@ const LoadingScreen = ({ onLoadingComplete }) => {
 
         const checkCompletion = () => {
             if (pageLoaded && timerCompleted) {
+                if (onLoadingComplete) onLoadingComplete()
                 setIsFading(true) // iniciar fade out
                 setTimeout(() => {
                     setIsVisible(false)
                     document.body.style.overflow = "auto"
-                    if (onLoadingComplete) onLoadingComplete()
-                }, 500) // duración del fade
+                }, 800) // increased duration to match new fade timing
             }
         }
 
@@ -38,7 +38,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
 
         // Animar el fill del logo
         const fillInterval = setInterval(() => {
-            setFillProgress(prev => {
+            setFillProgress((prev) => {
                 if (prev >= 100) {
                     clearInterval(fillInterval)
                     return 100
@@ -64,7 +64,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
     if (!isVisible) return null
 
     return (
-        <div className={`loading-screen ${isFading ? 'fade-out' : ''}`}>
+        <div className={`loading-screen ${isFading ? "fade-out" : ""}`}>
             <div className="loading-content">
                 <div className="logo-container">
                     <div className="logo-base">
@@ -97,11 +97,12 @@ const LoadingScreen = ({ onLoadingComplete }) => {
                 align-items: center;
                 justify-content: center;
                 z-index: 9999;
+                transition: opacity 0.8s ease-out, backdrop-filter 0.8s ease-out;
             }
 
             .fade-out {
                 opacity: 0;
-                transition: opacity 0.5s ease-out;
+                backdrop-filter: blur(0px);
                 pointer-events: none;
             }
 
@@ -110,6 +111,12 @@ const LoadingScreen = ({ onLoadingComplete }) => {
                 flex-direction: column;
                 align-items: center;
                 gap: 2rem;
+                transition: transform 0.8s ease-out, opacity 0.6s ease-out;
+            }
+
+            .fade-out .loading-content {
+                transform: translateY(-20px) scale(0.95);
+                opacity: 0;
             }
 
             .logo-container {
@@ -120,6 +127,10 @@ const LoadingScreen = ({ onLoadingComplete }) => {
                 align-items: center;
                 justify-content: center;
                 animation: logoFloat 3s ease-in-out infinite;
+            }
+
+            .fade-out .logo-container {
+                animation-play-state: paused;
             }
 
             .logo-base {
@@ -152,6 +163,10 @@ const LoadingScreen = ({ onLoadingComplete }) => {
                 text-align: center;
                 opacity: 0;
                 animation: sloganFadeIn 1s ease-out 1.5s forwards;
+            }
+
+            .fade-out .slogan-container {
+                animation-play-state: paused;
             }
 
             .slogan-text {
