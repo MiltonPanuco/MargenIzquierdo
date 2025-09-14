@@ -74,45 +74,6 @@ const Home = () => {
         features: ["Poetas invitados", "Entrevistas", "Textos exclusivos", "Contenido especial"],
     }
 
-    const featuredPoems = [
-        {
-            id: 1,
-            title: "Cartografía del Corazón",
-            author: "Esperanza Morales",
-            country: "Argentina",
-            excerpt: "En el mapa de mis venas se dibujan los caminos que llevan a tu nombre...",
-            gradient: "from-amber-800 via-orange-700 to-red-800",
-            category: "Amor",
-            isExclusive: true,
-            readTime: "3 min",
-            likes: 247,
-        },
-        {
-            id: 2,
-            title: "Susurros de Medianoche",
-            author: "Carlos Mendoza",
-            country: "Colombia",
-            excerpt: "La noche me abraza con dedos de terciopelo mientras escribo tu ausencia...",
-            gradient: "from-indigo-800 via-purple-700 to-pink-800",
-            category: "Nostalgia",
-            isExclusive: false,
-            readTime: "4 min",
-            likes: 189,
-        },
-        {
-            id: 3,
-            title: "Raíces de Viento",
-            author: "María Fernanda López",
-            country: "Chile",
-            excerpt: "Soy hija del viento y de la tierra que no conoce fronteras...",
-            gradient: "from-emerald-800 via-teal-700 to-cyan-800",
-            category: "Identidad",
-            isExclusive: true,
-            readTime: "5 min",
-            likes: 312,
-        },
-    ]
-
     // Función para cambiar quote con animación
     const changeQuote = (newIndex) => {
         setQuoteAnimation(false)
