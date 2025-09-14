@@ -1,0 +1,54 @@
+.text-reveal {
+    background: linear-gradient(45deg, #8B1E3F, #DAA520, #8B4513);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.poem-verse {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: verse-appear 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes verse-appear {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.ink-drop {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, transparent 70%);
+    animation: float 6s ease-in-out infinite;
+}
+
+.ink-drop:nth-child(2) {
+    animation-delay: -3s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: translateY(-20px) scale(1.05);
+    }
+}

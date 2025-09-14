@@ -1,0 +1,47 @@
+{
+    "title": "Septiembre 2025",
+    "subtitle": "Un viaje hacia las primeras palabras",
+    "description": "Todo lo bueno tiene un comienzo peculiar, y esta edición abre las puertas a un ciclo donde la palabra escrita encuentra nuevas formas de decir lo eterno. Septiembre es la promesa de voces que florecen en medio de cambios y memorias.",
+    "poems": [
+        {
+            "id": "p1",
+            "title": "Prólogo y epílogo",
+            "author": "Gloria Gómez Gómez",
+            "author_info": "Gloria es una escritora independiente de 49 años, desde su juventud se sintió atraída por la poesía y hoy en día plasma su inspiración en versos libres, la manifestación pura de su alma, líneas sencillas que buscan el camino hacia lo inmarcesible, gran parte de sus poemas son el grito desahogado de quien calla un amor en lo profundo.",
+            "content": "Aquí estoy,\npensando en lo que tú y yo fuimos,\nsi es que fuimos,\nfuimos una ráfaga de viento,\ndespués, un desventurado suspiro.\n\n¿Qué fuimos?\nMe lo pregunto mientras contemplo\nel atardecer muriendo,\neso fuimos,\nun sentimiento efímero y lastimero,\nsentimiento transitorio,\nde eternos anhelos.\n\nAquí sigo,\nentre signos de interrogación,\n¿Qué fuimos amor?\nTintero y pluma frente a una página\ndonde nada se plasmó,\nun verso incompleto,\nsi es que algo se escribió.\n\nY aquí sigo, necia en preguntar,\nsi fuimos un botón de rosa\nque no alcanzó a brotar.\n\nUn garabato nítido\nescrito en la memoria...\n\nEso fuimos amor,\nun instante de gloria,\nprólogo y epílogo,\nde un libro sin historia.",
+            "country": "México",
+            "category": "Poema",
+            "likes": 0
+        },
+        {
+            "id": "p2",
+            "title": "eN eL RaM",
+            "author": "Milton Cruz",
+            "author_info": "Milton es un explorador de mundos invisibles, a sus 21 años ve la belleza en cada detalle y la transforma en arte. Desde la música hasta el teatro, pasando por video y palabras, su mente crea puentes entre lo sensible y lo lógico, siempre buscando maneras de expresar lo que otros solo sienten.",
+            "content": "No quiero conocerte,\nporque sé que no estoy bien,\npero quiero conocerte,\ncomo quien quiere atrapar un cometa\nantes de que se pierda en la noche.\n\nInventaré un idioma de estrellas,\ny cuando tú decidas quererme,\nte enseñaré cada palabra\ncomo quien traza constelaciones en tu piel.\n\nTu pelo chino se enreda con la Vía Láctea,\ntus lentes reflejan galaxias diminutas\ny tu estatura pequeña\nes el planeta perfecto donde quiero orbitar.\n\nAquí estoy...\nun astro perdido,\nesperando que tus ojos me conviertan\nen parte de tu cielo.",
+            "country": "México",
+            "category": "Poema",
+            "likes": 0
+        },
+        {
+            "id": "p3",
+            "title": "Poema 3",
+            "author": "Autor 3",
+            "author_info": "Información del autor 3",
+            "content": "Texto del poema 3",
+            "country": "México",
+            "category": "Poema",
+            "likes": 0
+        },
+        {
+            "id": "p4",
+            "title": "Poema 4",
+            "author": "Autor 4",
+            "author_info": "Información del autor 4",
+            "content": "Texto del poema 4",
+            "country": "México",
+            "category": "Poema",
+            "likes": 0
+        }
+    ]
+}
