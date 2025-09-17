@@ -65,40 +65,6 @@ const FAQ = () => {
         },
         {
             id: 8,
-            question: "¿Qué criterios usan para seleccionar los textos?",
-            answer: (
-                <>
-                    <strong>Originalidad:</strong> Evitamos clichés, frases hechas o ideas repetidas. Preferimos imágenes nuevas,
-                    giros propios y un estilo personal reconocible.
-                    <br />
-                    <strong>Calidad literaria:</strong> Textos revisados en ortografía, puntuación y estructura. La forma debe
-                    potenciar el fondo, no distraerlo (Aunque entendemos que habrá excepciones que pueden surgir en tono de
-                    protesta, experimental, escritura autómatica, escritura fónetica o incluso escritura radical).
-                    <br />
-                    <strong>Claridad expresiva:</strong> Aunque se valore la complejidad poética, el texto debe ser comprensible
-                    dentro de su propuesta, sin caer en lo confuso por descuido.
-                    <br />
-                    <strong>Uso del lenguaje:</strong> Riqueza en vocabulario, ritmo y musicalidad. Valoramos la capacidad de
-                    crear imágenes potentes y evocadoras.
-                    <br />
-                    <strong>Conexión emocional:</strong> Que el texto provoque en el lector algún tipo de resonancia, ya sea
-                    estética, reflexiva o emocional.
-                    <br />
-                    <strong>Afinidad temática:</strong> Cuando existe un tema mensual, apreciamos que el texto dialogue con él de
-                    forma creativa, no literal ni forzada.
-                    <br />
-                    <strong>Extensión adecuada:</strong> Piezas que mantengan la intensidad sin alargarse innecesariamente. La
-                    brevedad también puede ser un valor.
-                    <br />
-                    <strong>Propuesta artística global:</strong> Más allá del texto aislado, consideramos si aporta una voz
-                    distinta a la edición, enriqueciendo la diversidad de la revista.
-                </>
-            ),
-            icon: Heart,
-            title: "Criterios",
-        },
-        {
-            id: 9,
             question: "¿Hay límite de edad o país para participar?",
             answer:
                 "No, no hay ningún límite de edad ni restricción geográfica para participar. Cualquier persona hispanohablante, sin importar dónde se encuentre, puede enviar sus textos. Queremos que la literatura sea un espacio inclusivo y abierto, donde las ideas y emociones puedan compartirse más allá de fronteras y generaciones.",
@@ -106,7 +72,7 @@ const FAQ = () => {
             title: "Edad / País",
         },
         {
-            id: 10,
+            id: 9,
             question: "¿La participación tiene algún costo?",
             answer:
                 "No, enviar y publicar en Margen Izquierdo es totalmente gratuito. Creemos firmemente en la democratización de la literatura y en brindar a todos los escritores, sin importar su experiencia o recursos, la oportunidad de dar a conocer su obra. Nuestro objetivo es fomentar la creatividad y la difusión cultural sin barreras económicas.",
@@ -114,7 +80,7 @@ const FAQ = () => {
             title: "Precio",
         },
         {
-            id: 11,
+            id: 10,
             question: "¿Puedo usar seudónimo en lugar de mi nombre real?",
             answer:
                 "Sí, puedes publicar bajo un seudónimo si lo prefieres. Solo asegúrate de indicarlo claramente en el formulario de envío. Respetamos la privacidad y la identidad de nuestros autores, y lo importante es que tu obra llegue al público sin importar el nombre que uses.",
@@ -122,7 +88,7 @@ const FAQ = () => {
             title: "Autor",
         },
         {
-            id: 12,
+            id: 11,
             question: "¿Con qué frecuencia se publican nuevas ediciones?",
             answer:
                 "Margen Izquierdo publica ediciones mensuales, garantizando un flujo constante de textos frescos y variados. Cada 01 del mes lanzamos una nueva edición, ofreciendo a los lectores voces diversas y a los autores la oportunidad de compartir sus creaciones con regularidad. A su vez, lanzamos la convocatoria el 15 de cada mes para nuevos escritos del mes entrante.",
@@ -130,7 +96,7 @@ const FAQ = () => {
             title: "Ediciones",
         },
         {
-            id: 13,
+            id: 12,
             question: "¿Qué es una introducción en tercera persona?",
             answer:
                 "Es una breve presentación del autor escrita como si otra persona hablara de él o ella. Sirve para dar contexto sobre la trayectoria, intereses o estilo del autor, sin usar la primera persona. Por ejemplo: 'María López es poeta mexicana que explora la naturaleza y la memoria en sus textos, combinando sensibilidad y reflexión'.",
@@ -138,7 +104,7 @@ const FAQ = () => {
             title: "Tercera persona",
         },
         {
-            id: 14,
+            id: 13,
             question: "¿Recibiré un pago por publicar mi texto?",
             answer:
                 "No ofrecemos un pago económico por las publicaciones. Lo que brindamos es difusión, reconocimiento como autor, crédito por tu obra y la oportunidad de formar parte de una comunidad literaria latinoamericana vibrante, donde tus textos pueden llegar a lectores interesados y apasionados por la literatura.",
@@ -225,33 +191,13 @@ const FAQ = () => {
                                 </h3>
 
                                 <nav className="space-y-2 max-h-96 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-red-300 scrollbar-track-transparent">
-                                    {faqData.slice(0, 7).map((faq, index) => {
+                                    {faqData.map((faq, index) => {
                                         const IconComponent = faq.icon
                                         return (
                                             <button
                                                 key={faq.id}
                                                 onClick={() => setActiveSection(index)}
                                                 className={`w-full text-left p-3 rounded-xl transition-all duration-300 flex items-center space-x-3 ${activeSection === index
-                                                        ? "bg-gradient-to-r from-red-100 to-amber-100 text-red-900 shadow-md"
-                                                        : "text-gray-700 hover:bg-white hover:bg-opacity-50"
-                                                    }`}
-                                            >
-                                                <IconComponent className="w-5 h-5 flex-shrink-0" />
-                                                <span className="text-sm font-medium" style={{ fontFamily: "Crimson Text" }}>
-                                                    {faq.title}
-                                                </span>
-                                            </button>
-                                        )
-                                    })}
-
-                                    {faqData.slice(7).map((faq, index) => {
-                                        const actualIndex = index + 7
-                                        const IconComponent = faq.icon
-                                        return (
-                                            <button
-                                                key={faq.id}
-                                                onClick={() => setActiveSection(actualIndex)}
-                                                className={`w-full text-left p-3 rounded-xl transition-all duration-300 flex items-center space-x-3 ${activeSection === actualIndex
                                                         ? "bg-gradient-to-r from-red-100 to-amber-100 text-red-900 shadow-md"
                                                         : "text-gray-700 hover:bg-white hover:bg-opacity-50"
                                                     }`}
@@ -294,11 +240,7 @@ const FAQ = () => {
                                                     {faq.question}
                                                 </h3>
                                                 <div className="text-gray-800 leading-relaxed mb-4 sm:mb-6 text-justify text-sm sm:text-base md:text-lg">
-                                                    {typeof faq.answer === "string" ? (
-                                                        <p>{faq.answer}</p>
-                                                    ) : (
-                                                        <div className="space-y-3 sm:space-y-4">{faq.answer}</div>
-                                                    )}
+                                                    <p>{faq.answer}</p>
                                                 </div>
                                             </div>
                                         </div>

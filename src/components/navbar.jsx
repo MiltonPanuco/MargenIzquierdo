@@ -36,6 +36,7 @@ const Navbar = () => {
     const isArchivePage = location.pathname === "/archive"
     const isTermsPage = location.pathname === "/terms"
     const isPrivacyPage = location.pathname === "/privacy"
+    const isRubricPage = location.pathname === "/rubric"
     const isCopyrightPage = location.pathname === "/copyright"
 
     // Páginas con comportamiento especial
@@ -47,6 +48,7 @@ const Navbar = () => {
         isArchivePage ||
         isTermsPage ||
         isPrivacyPage ||
+        isRubricPage ||
         isCopyrightPage
 
     // Detectar scroll para mostrar/ocultar navbar y calcular progreso
@@ -152,6 +154,13 @@ const Navbar = () => {
             gradient: "from-yellow-200 to-yellow-300",
         },
         {
+            name: "Rúbrica",
+            href: "/rubric",
+            icon: FileText,
+            description: "Tener en cuenta...",
+            gradient: "from-red-100 to-orange-200",
+        },
+        {
             name: "Reglas",
             href: "/rules",
             icon: FileText,
@@ -226,8 +235,8 @@ const Navbar = () => {
                                 />
                                 <div
                                     className={`absolute -top-1 -right-1 w-4 h-4 rounded-full transition-all duration-500 ease-out ${isInFirstViewport && !isSpecialPage
-                                            ? "bg-amber-300/60 backdrop-blur-sm animate-pulse"
-                                            : "bg-gradient-to-br from-yellow-300 to-amber-400 animate-pulse shadow-lg"
+                                        ? "bg-amber-300/60 backdrop-blur-sm animate-pulse"
+                                        : "bg-gradient-to-br from-yellow-300 to-amber-400 animate-pulse shadow-lg"
                                         }`}
                                 ></div>
                             </div>
@@ -246,12 +255,12 @@ const Navbar = () => {
                         <div
                             onClick={toggleMenu}
                             className={`flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-2xl transition-all duration-500 ease-out cursor-pointer select-none group ${isMenuOpen
-                                    ? isInFirstViewport && !isSpecialPage
-                                        ? "bg-white/30 backdrop-blur-md border border-white/40 shadow-xl scale-105"
-                                        : "bg-amber-100 border border-amber-200 shadow-xl scale-105"
-                                    : isInFirstViewport && !isSpecialPage
-                                        ? "bg-white/15 backdrop-blur-md border border-white/25 shadow-lg hover:bg-white/25 hover:shadow-xl hover:scale-105 active:scale-95"
-                                        : "bg-amber-50/80 border border-amber-200/50 shadow-lg hover:bg-amber-100 hover:shadow-xl hover:scale-105 active:scale-95"
+                                ? isInFirstViewport && !isSpecialPage
+                                    ? "bg-white/30 backdrop-blur-md border border-white/40 shadow-xl scale-105"
+                                    : "bg-amber-100 border border-amber-200 shadow-xl scale-105"
+                                : isInFirstViewport && !isSpecialPage
+                                    ? "bg-white/15 backdrop-blur-md border border-white/25 shadow-lg hover:bg-white/25 hover:shadow-xl hover:scale-105 active:scale-95"
+                                    : "bg-amber-50/80 border border-amber-200/50 shadow-lg hover:bg-amber-100 hover:shadow-xl hover:scale-105 active:scale-95"
                                 }`}
                             role="button"
                             tabIndex={0}

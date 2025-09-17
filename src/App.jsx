@@ -12,6 +12,7 @@ import About from "./components/about";
 import Submit from "./components/submit";
 import Rules from "./components/rules";
 import Faq from "./components/faq";
+import Rubric from "./components/rubric";
 import Archive from "./components/archive";
 import Contact from "./components/contact";
 
@@ -48,6 +49,7 @@ function App() {
             <Route path="/submit" element={<Submit />} />
             <Route path="/rules" element={<Rules />} />
             <Route path="/faq" element={<Faq />} />
+            <Route path="/rubric" element={<Rubric />} />
             <Route path="/archive" element={<Archive />} />
             <Route path="/contact" element={<Contact />} />
 

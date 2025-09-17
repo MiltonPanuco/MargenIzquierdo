@@ -233,7 +233,7 @@ const SubmitRules = () => {
                             </div>
                         </div>
 
-                        {/* Content Area - Full width on mobile, 3/4 width on desktop */}
+                        {/* Content Area */}
                         <div className="lg:col-span-3">
                             <div className="bg-white bg-opacity-70 backdrop-blur-sm rounded-2xl md:rounded-3xl p-4 md:p-8 lg:p-12 shadow-lg">
                                 {rules.map((rule, index) => {
@@ -248,7 +248,7 @@ const SubmitRules = () => {
                                                     <IconComponent className="w-6 h-6 md:w-8 md:h-8 text-red-900" />
                                                 </div>
                                                 <h2
-                                                    className="text-2xl md:text-3xl lg:text-4xl font-bold text-red-900 text-center sm:text-left"
+                                                    className="text-2xl md:text-3xl lg:text-4xl font-bold text-red-900 text-center sm:text-left ml-3"
                                                     style={{ fontFamily: "Playfair Display" }}
                                                 >
                                                     {rule.title}

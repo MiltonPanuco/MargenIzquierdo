@@ -8,10 +8,10 @@ const Footer = () => {
         { name: "¿Quiénes Somos?", href: "/about" },
         { name: "Escritos Destacados", href: "/archive" },
         { name: "Enviar Escrito", href: "/submit" },
+        { name: "Rúbrica", href: "/rubric" },
         { name: "Reglas", href: "/rules" },
         { name: "Preguntas Frecuentes", href: "/faq" },
         { name: "Contacto", href: "/contact" }
-
     ]
 
     const legalLinks = [
@@ -29,7 +29,7 @@ const Footer = () => {
                 <div className="absolute top-1/2 left-1/3 w-24 h-24 rounded-full bg-amber-300/10 animate-pulse" style={{ animationDelay: '4s' }}></div>
             </div>
 
-            <div className="relative 10">
+            <div className="relative">
                 {/* Sección principal del footer */}
                 <div className="px-6 py-16">
                     <div className="max-w-7xl mx-auto">
